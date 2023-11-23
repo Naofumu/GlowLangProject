@@ -1,0 +1,352 @@
+body {
+    background: #05727B;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+/*
+Появление окна логина сверху вниз.
+*/
+@keyframes windowAnimation {
+    0% { transform: translateY(-50%)}
+    100% { transform: translateY(0%)}
+}
+/*
+Появление гор 
+*/
+@keyframes frontMountainsAnimation { 
+    0% { transform: translateY(50%)}
+    100% { transform: translateY(0%)}
+}
+@keyframes backMountainsAnimation {
+    0% { transform: translateY(50%)}
+    100% { transform: translateY(0%)}
+}
+/*
+Анимации лучей
+*/
+@keyframes beamsAnimation {
+    0% {opacity: 0;}
+    100% {opacity: .3;}
+}
+
+@keyframes firstBeamRotating {
+    0% { transform: rotate(-5deg); opacity: .3; }
+    50% { transform: rotate(-25deg); opacity: .2; }
+    100% { transform: rotate(-5deg); opacity: .3; }
+}
+@keyframes secondBeamRotating {
+    0% { transform: rotate(-45deg); opacity: .3; }
+    50% { transform: rotate(-65deg); opacity: .2; }
+    100% { transform: rotate(-45deg); opacity: .3; }
+}
+/*
+Появление свечения и двух кругов позади окна.
+*/
+@keyframes glowAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+header {
+    /*
+    Лого
+    */
+    .logo {    
+        width: 350px;
+        height: 350px;
+        background: url(../pictures/GlowLogo.png);
+        background-repeat: no-repeat;
+        filter: drop-shadow(0px 0px 10px #00000075);
+        position: absolute;
+        left: -100px;
+        top: -150px; 
+        z-index: -1;
+        transition: all .5s;
+        border-style: none;
+    }
+    .logo:hover {
+        width: 400px;
+        height: 400px;
+        background: url(../pictures/GlowLogoHover.png);
+    }
+}
+main {
+    /*
+    Смещение основной части на 100 пикселей вверх.
+    */
+    margin-top: -100px;
+    .Container {
+        margin-top: -900px;
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+    /*
+    Горы
+    */
+    .frontMountains {
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        background: url(../pictures/frontMountains.png);
+        z-index: -2;
+        animation: frontMountainsAnimation 1s;
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+    }
+    .backMountains {
+        width: 100%;
+        height: 600px;
+        background: url(../pictures/backMountains.png);
+        position: absolute;
+        z-index: -4;
+        animation: backMountainsAnimation 1.5s;
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+    }
+    /*
+    Контейнер с Маяком
+    */
+    .LightContainer {
+        position: absolute;
+        width: 300px;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 300px;
+        z-index: -3;
+        right: 0;
+    }
+    .lightHouse {
+        margin-top: 400px;
+        width: 250px;
+        height: 650px;
+        background: url(../pictures/lightHouse.png);
+        z-index: -1;
+        animation: frontMountainsAnimation 1s;
+    }
+    /*
+    Свечение за окном и два круга 
+    */
+    .backGroundGlow {
+        width: 1030px;
+        height: 941px;
+        flex-shrink: 0;
+        border-radius: 1030px;
+        background: radial-gradient(48.1% 48.92% at 50% 48.72%, #93B785 0%, rgba(147, 183, 133, 0.00) 100%);
+        position: absolute;
+        z-index: -4;
+        margin: -200px auto;
+        opacity: 0;
+        animation: glowAnimation 1s forwards;
+        animation-delay: 1s;
+    }
+    .firstBackGroundCircle, .secondBackGroundCircle {
+        margin-left: -120px;
+        margin-top: -120px;
+        z-index: -2;
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        border-radius: 350px;
+        background: linear-gradient(-120deg, rgba(198, 204, 140, 0.60) 19.64%, rgba(198, 204, 140, 0.00) 102.24%);
+        opacity: 0;
+        animation: glowAnimation 1s forwards;
+        animation-delay: 1s;
+    }
+    /*
+    Окно по центру 
+    */
+    .TestWindow {
+        width: 1000px;
+        height: 700px;
+        margin: 200px auto;
+        background: #015A71;
+        border-radius: 40px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.50);
+        opacity: 1;
+        animation: windowAnimation 1s;
+        
+    }
+    .questionsText {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        padding-top: 100px;
+    }
+    .questionsText:hover {
+        filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.699));
+    }
+    /*
+    Контейнер с кнопками 
+    */
+    .buttonContainer {
+        margin-top: 50px;
+        display: flex;
+        width: 1000px;
+        height: 500px;
+        align-items: center;
+        flex-direction: column;
+    }
+    .buttonSecond, .buttonThird {
+        padding-top: 50px;
+    }
+    .answer1, .buttonFirst, .buttonFirstShadow {
+        width: 500px;
+        height: 90px;
+        border-radius: 30px;
+        border-style: none;
+    }
+    .answer2, .buttonSecond, .buttonSecondShadow {
+        width: 500px;
+        height: 90px;
+        border-radius: 30px;
+        border-style: none;
+    }
+    .answer3, .buttonThird, .buttonThirdShadow {
+        width: 500px;
+        height: 90px;
+        border-radius: 30px;
+        border-style: none;
+    }
+    .answer1 {
+        z-index: 1;
+        background: linear-gradient(180deg, #C6CC8C 0%, #9DCC8B 100%);
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        filter: drop-shadow(0px 0px 30px rgba(198, 204, 140, 0.60));
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        
+    }
+    .answer2 {
+        z-index: 1;
+        background: linear-gradient(180deg, #C6CC8C 0%, #9DCC8B 100%);
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        filter: drop-shadow(0px 0px 30px rgba(198, 204, 140, 0.60));
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+    }
+    .answer3 {
+        z-index: 1;
+        background: linear-gradient(180deg, #C6CC8C 0%, #9DCC8B 100%);
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        filter: drop-shadow(0px 0px 30px rgba(198, 204, 140, 0.60));
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+    }
+    .buttonFirstShadow {
+        position: absolute;
+        background: linear-gradient(180deg, #ADB17E 0%, #7AA06C 100%);
+        margin-top: 10px;
+    }
+    .buttonSecondShadow {
+        position: absolute;
+        background: linear-gradient(180deg, #ADB17E 0%, #7AA06C 100%);
+        margin-top: 10px;
+    }
+    .buttonThirdShadow {
+        position: absolute;
+        background: linear-gradient(180deg, #ADB17E 0%, #7AA06C 100%);
+        margin-top: 10px;
+    }
+    .answer1:hover {
+        filter: drop-shadow(0px 0px 50px rgba(198, 204, 140, 0.60));
+        color: black;
+    }
+    .answer1:active {
+        margin-top: 10px; 
+    }
+    .answer2:hover {
+        filter: drop-shadow(0px 0px 50px rgba(198, 204, 140, 0.60));
+        color: black;
+    }
+    .answer2:active {
+        margin-top: 10px;
+    }
+    .answer3:hover {
+        filter: drop-shadow(0px 0px 50px rgba(198, 204, 140, 0.60));
+        color: black;
+    }
+    .answer3:active {
+        margin-top: 10px; 
+    }
+    /*
+    Иконки флагов
+    */
+    .Flag1 {
+        padding-right: 5px;
+        width: 70px;
+        height: 43px;
+        position: relative;
+        background: url(../pictures/GermanFlag.png);
+        background-repeat: no-repeat;
+    }
+    .Flag2 {
+        padding-right: 5px;
+        width: 70px;
+        height: 43px;
+        position: relative;
+        background: url(../pictures/EngFlag.png);
+        background-repeat: no-repeat;
+    }
+    .Flag3 {
+        padding-right: 5px;
+        width: 70px;
+        height: 43px;
+        position: relative;
+        background: url(../pictures/FrFlag.png);
+        background-repeat: no-repeat;
+    }
+    /*
+    Лучи маяка
+    */
+    .firstBeam, .secondBeam {
+        position: absolute;
+        height: 50px;
+        opacity: .3;
+        z-index: -3;
+        margin-bottom: 850px;
+        overflow: hidden;
+        opacity: 0;
+    } 
+    .firstBeam {
+        margin-bottom: 650px;
+        width: 350px;
+        background: linear-gradient(-125deg, #C6CC8C , #ffffff00);
+        transform: rotate(-25deg);
+        transform-origin: right;
+        right: 150px;
+        animation: firstBeamRotating 7s infinite, beamsAnimation 2s forwards;
+        animation-delay: 1s;
+    }
+    .secondBeam {
+        margin-bottom: 650px;
+        width: 500px;
+        background: linear-gradient(-125deg, #C6CC8C, #ffffff00 );
+        transform: rotate(-65deg);
+        transform-origin: right;
+        right: 150px;
+        animation: secondBeamRotating 3s infinite, beamsAnimation 2s forwards;
+        animation-delay: 1s;
+    }
+}

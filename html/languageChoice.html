@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="..\styles\languageChoice.css">
+    <link rel="stylesheet" href="..\styles\reset.css">
+    <title>GlowLang</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+    </div>
+    </header>
+        <main>
+            <div class="Testwindow">
+                <div class="backGroundGlow"></div>
+                <h2 class="questionsText"> Выберите язык</h2>
+                <div class="buttonContainer">
+                    <div class="buttonFirst">
+                    <div class="buttonFirstShadow"></div>
+                    <button class="answer1" onclick="deutsch()"><div class="Flag1"></div>Deutsch</button>
+                    <script> 
+                    function deutsch(){
+                        window.location.href='../html/Test.html';
+                    }
+                    </script>
+                    </div>
+                    <div class = "buttonSecond">
+                    <div class="buttonSecondShadow"></div>
+                        <button class="answer2" onclick="english()"><div class="Flag2"></div>English</button>
+                    <script> function english(){
+                        window.location.href='../html/Test.html';
+                    }
+                    </script>
+                    </div>
+                    <div class="buttonThird">
+                        <div class="buttonThirdShadow"></div>
+                        <button class="answer3" onclick="french()"><div class="Flag3"></div>French</button>
+                        <script> function french(){
+                            window.location.href='../html/Test.html';
+                        }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="Container">
+                    <div class="firstBeam"></div>
+                    <div class="secondBeam"></div>
+                <div class="LightContainer">
+                    <div class="lightHouse"></div>
+                </div>
+                <div class="backMountains"></div>
+                <div class="frontMountains"></div>
+            </div>
+        </main>   
+</body>
+</html>
