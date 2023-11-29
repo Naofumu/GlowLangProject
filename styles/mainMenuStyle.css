@@ -1,0 +1,221 @@
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    background: #05727B;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.wrapper {
+    display: flex;
+}
+aside {
+    height: 100vh;
+    float: left;
+    background: url(../pictures/aside.png);
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4));
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+}
+.logo {    
+    width: 350px;
+    height: 350px;
+    background: url(../pictures/GlowLogo.png);
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 10px #00000075);
+    position: absolute;
+    left: -100px;
+    top: -150px; 
+    z-index: -1;
+    transition: all .5s;
+}
+aside > ul {
+    display: flex;
+    width: 240px;
+    height: 400px;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 250px 0 0 16px;
+}
+aside > ul > li > .back {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background: #C9D080;
+    margin: -118px 0 0 -6px;
+    z-index: -1;
+    border-radius: 30px;
+    opacity: 0;
+    scale: .9;
+    transition: all .5s;
+}
+aside > ul > li > button {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    opacity: 0;
+}
+.popup {
+    width: 260px;
+    height: 120px;
+    position: absolute;
+    background: url(../pictures/popup.png);
+    background-repeat: no-repeat;
+    margin: -120px 0 0 120px;
+    opacity: 0;
+    scale: 0.8;
+    transition: all 1s;
+}
+.popup > p {
+    margin: 30px 0 0 50px;
+    font-size: 20px;
+}
+aside > ul > li > button:hover ~ .popup {
+    scale: 1;
+    opacity: 1;
+}
+
+
+
+nav {
+    display: flex;
+    height: 100vh;
+    width: 400px;
+    float: right;
+    background: url(../pictures/nav.png);
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4));
+    right: 0;
+    position: fixed;
+}
+nav > ul > li > button {
+    width: 300px;
+    height: 85px;
+    border-radius: 15px;
+    background: #C0CC8B;
+    border: none;
+    margin: 40px 0 0 70px;
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    transition: background .5s;
+    cursor: pointer;
+}
+nav > ul > li > button:hover {
+    background: #D2DF98;
+}
+nav > ul > li > button:active {
+    transform: translateY(10px);
+}
+nav > ul > li:last-child > button {
+    width: 300px;
+    height: 85px;
+    background: #094263;
+    position: absolute;
+    bottom: 40px;
+}
+nav > ul > li:last-child > button:hover {
+    background: #1B587B;
+}
+.shadow {
+    width: 300px;
+    height: 85px;
+    border-radius: 15px;
+    background: #7EA16D;
+    border: none;
+    margin: -75px 0 0 70px;
+    position: absolute;
+    z-index: -1;
+}
+nav > ul > li:last-child > .shadow {
+    width: 300px;
+    height: 85px;
+    background: #0C2544;
+    position: absolute;
+    bottom: 30px;
+}
+
+main {
+    background: #05727B;
+    width: 100vw;
+    height: 100vh;
+    margin-left: 300px;
+    margin-right: 400px;
+}
+
+.levels {
+    min-height: 100%;
+    margin-bottom: -350px;
+}
+
+.location1 {
+    margin-top: 200px;
+    background: url(../pictures/background_1location.png);
+    height: 2520px;
+    z-index: -6;
+}
+.location2 {
+    margin-top: -270px;
+    background: url(../pictures/background_2location.png);
+    height: 2520px;
+    z-index: -5;
+}
+.location3 {
+    margin-top: -270px;
+    background: url(../pictures/background_3location.png);
+    height: 2520px;
+    z-index: -4;
+}
+.location4 {
+    margin-top: -300px;
+    background: url(../pictures/background_4location.png);
+    height: 2520px;
+    z-index: -3;
+}
+.location5 {
+    margin-top: -300px;
+    background: url(../pictures/background_5location.png);
+    height: 2520px;
+    z-index: -2;
+}
+.location6 {
+    margin: -300px 0 250px 0;
+    background: url(../pictures/background_6location.png);
+    height: 2520px;
+    z-index: -2;
+}
+
+footer {
+
+    height: 350px;
+    z-index: 0;
+
+    background: #033C55;
+    filter: drop-shadow(0px 0px 10px #00000075);
+    .links {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .textBlock {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 18px;
+            height: 170px;
+            margin: 100px 50px 0 50px;
+        }
+
+        .text {
+            transition: all .5s;
+        }
+        .text:hover {
+            filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.699));
+            cursor: default;
+        }
+    }
+}
