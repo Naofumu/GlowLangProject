@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="..\styles\Test1.css">
     <link rel="stylesheet" href="..\styles\reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="../scripts/Quiz.js"></script>
     <title>GlowLang</title>
 </head>
 <body>
@@ -16,44 +18,66 @@
     </header>
         <main>
             <div class="TestWindow">
+                <div class="start_btn">
+                    <div class="str_btn_shadow"></div>
+                    <button class="str_btn">Начать Тест</button>
+                </div>
+                <div class="quiz_box">
+                    <header>
+                        <div class="title">Awesome Quiz Application</div>
+                        <div class="timer">
+                            <div class="time_left_txt">Оставшееся Время</div>
+                            <div class="timer_sec">60</div>
+                        </div>
+                        <div class="time_line"></div>
+                    </header>
+                    <section>
+                        <div class="que_text">
+                            <div></div>
+                        </div>
+                        <div class="option_list">
+                            <div class="option">
+                                <span></span>
+                            </div>
+                            <div class="option">
+                                <span></span>
+                            </div>
+                            <div class="option">
+                                <span></span>
+                            </div>
+                            <div class="option">
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                    </section>
+                    <footer>
+                        <div class="total_que">
+                            <span></span>
+                        </div>
+                        <div class="nxt_btn">
+                            <div class="next_btn_shadow"></div>
+                            <button class="next_btn">Следующий Вопрос</button>
+                        </div>
+                    </footer>
+                </div>
+                <div class="result_box">
+                    <div class="icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="complete_text">Вы прошли тест</div>
+                    <div class="score_text">
+                        <span></span>
+                    </div>
+                    <div class="button_quit">
+                        <div class="quit_btn_shadow"></div>
+                        <button class="quit">Завершить тест</button>
+                    </div>
+                </div>
                 <div class="firstBackGroundCircle"></div>
                 <div class="secondBackGroundCircle"></div>
                 <div class="backGroundGlow"></div>
-                <h2 class="questionsText"> Вопрос</h2>
-                <div class="buttonContainer">
-                    <div class="buttonFirst">
-                    <div class="buttonFirstShadow"></div>
-                    <buttton class="answer1" onclick="answer1()">Ответ</buttton>
-                    <script> function answer1() {
-                        window.location.href='#';
-                    }
-                    </script>
-                    </div>
-                    <div class = "buttonSecond">
-                    <div class="buttonSecondShadow"></div>
-                    <buttton class="answer2" onclick="answer2()">Ответ</buttton>
-                    <script> function answer2() {
-                        window.location.href='#';
-                    }
-                    </script>
-                    </div>
-                    <div class = "buttonThird">
-                    <div class="buttonThirdShadow"></div>
-                    <buttton class="answer3" onclick="answer3()">Ответ</buttton>
-                    <script> function answer3() {
-                        window.location.href='#';
-                    }
-                    </script>
-                    </div>
-                    <div class = "buttonFourth">
-                    <div class="buttonFourthShadow"></div>
-                    <buttton class="answer4" onclick="answer4()">Ответ</buttton>
-                    <script> function answer4() {
-                        window.location.href='#';
-                    }
-                    </script>
-                    </div>
-                </div>
             </div>
             <div class="Container">
                     <div class="firstBeam"></div>
