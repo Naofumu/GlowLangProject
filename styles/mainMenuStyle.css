@@ -189,6 +189,183 @@ main {
     z-index: -2;
 }
 
+.settingsContainer {
+    position: fixed;
+    z-index: 100;
+    top: 10%;
+    left: 17%;
+    display: none;
+}
+.settings{
+    width: 1150px;
+    height: 680px;
+    background: linear-gradient(180deg, rgba(233, 238, 189, 0.80) 0%, rgba(157, 204, 139, 0.76) 100%);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.50);
+    border-radius: 40px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.changeLanguage, .changeColor, .changeDifficulty {
+    width: 1100px;
+    height: 170px;
+    background: linear-gradient(180deg, rgba(233, 238, 189, 0.80) 0%, rgba(157, 204, 139, 0.76) 100%);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.50);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    transition: 1s all;
+}
+.f {
+    font-size: 48px;
+    margin-left: 33px;
+}
+.firstDropmenu{
+    width: 420px;
+    height: 90px;
+    background-color: #E9EEBD;
+    border-radius: 20px;
+    font-size: 36px;
+    color: black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 25px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.50);
+}
+.firstDropmenu > p {
+    padding: 35px;
+    width: 420px;
+    text-shadow: none;
+}
+.langMenu {
+    background-color: #E9EEBD;
+    position: relative;
+    border-radius: 20px;
+    text-shadow: none;
+    top: 90px;
+    min-width: 420px;
+    height: 235px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.langMenu > * {
+    width: 420px;
+    padding-left: 35px;
+    padding-top: 10px;
+}
+.line {
+    margin: auto;
+    padding: 0px;
+    height: 1px;
+    width: 380px;
+    background-color: black;
+}
+.langMenu > *:hover {
+    background-color: #C1C698;
+    border-radius: 20px;
+}
+.secondDropmenu{
+    width: 420px;
+    height: 90px;
+    background-color: #E9EEBD;
+    border-radius: 20px;
+    font-size: 36px;
+    color: black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 25px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.50);
+}
+.secondDropmenu > p {
+    padding: 35px;
+    width: 420px;
+    text-shadow: none;
+}
+.themeMenu {
+    background-color: #E9EEBD;
+    position: relative;
+    border-radius: 20px;
+    text-shadow: none;
+    top: 45px;
+    min-width: 420px;
+    height: 140px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.themeMenu > * {
+    width: 420px;
+    padding-left: 35px;
+    padding-top: 10px;
+}
+.line {
+    margin: auto;
+    padding: 0px;
+    height: 1px;
+    width: 380px;
+    background-color: black;
+}
+.themeMenu > *:hover {
+    background-color: #C1C698;
+    border-radius: 20px;
+}
+.thirdDropmenu{
+    width: 420px;
+    height: 90px;
+    background-color: #E9EEBD;
+    border-radius: 20px;
+    font-size: 36px;
+    color: black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 25px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.50);
+}
+.thirdDropmenu > p {
+    padding: 35px;
+    width: 420px;
+    text-shadow: none;
+}
+.difMenu {
+    background-color: #E9EEBD;
+    position: relative;
+    border-radius: 20px;
+    text-shadow: none;
+    top: 90px;
+    min-width: 420px;
+    height: 235px;
+    transition: .5s;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.difMenu > * {
+    width: 420px;
+    padding-left: 35px;
+    padding-top: 10px;
+}
+.line {
+    margin: auto;
+    padding: 0px;
+    height: 1px;
+    width: 380px;
+    background-color: black;
+}
+.difMenu > *:hover {
+    background-color: #C1C698;
+    border-radius: 20px;
+}
+
 footer {
 
     height: 350px;
